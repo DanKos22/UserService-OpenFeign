@@ -22,6 +22,7 @@ public class UserController {
 
     // Method to handle user registration requests
     public String confirmAndRegister(@RequestBody UserDetails user) {
+        // Call the interface RegistrationServiceClient. Information obtained from endpoint confirm is stored in the string variable confirm
         String confirm = registrationServiceClient.someDetails(user);
         //Map<String, String> responseMessage = new HashMap<>();
         //responseMessage.put("message", confirm);

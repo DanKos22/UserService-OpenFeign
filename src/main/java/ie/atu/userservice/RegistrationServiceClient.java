@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @FeignClient(name = "confirmation-service", url = "http://localhost:8081")
 public interface RegistrationServiceClient {
+
+    // Call endpoint confirm on port 8081
     @PostMapping("/confirm")
     String someDetails(@RequestBody UserDetails user);
 
